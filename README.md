@@ -1,44 +1,213 @@
-<p align="center">
-    <img title="Laracord" height="100" src="https://raw.githubusercontent.com/laracord/laracord.com/main/public/images/logo-full-dark.png" alt="Laracord Logo" />
-</p>
+# PHP_Laravel12_Laracord
 
-<p align="center">
-  <a href="https://github.com/laracord/framework/actions"><img src="https://img.shields.io/github/actions/workflow/status/laracord/framework/main.yml?branch=main&style=flat-square" alt="Build Status" /></a>
-  <a href="https://packagist.org/packages/laracord/framework"><img src="https://img.shields.io/packagist/dt/laracord/framework.svg?style=flat-square" alt="Total Downloads" /></a>
-  <a href="https://packagist.org/packages/laracord/framework"><img src="https://img.shields.io/packagist/v/laracord/framework.svg?label=framework&style=flat-square" alt="Latest Stable Version" /></a>
-  <a href="https://packagist.org/packages/laracord/framework"><img src="https://img.shields.io/packagist/l/laracord/framework.svg?style=flat-square" alt="License" /></a>
-</p>
 
-Laracord is a [micro-framework](https://github.com/laracord/framework) providing a powerful starting point for your next [Discord](https://discord.com/developers/docs/intro) bot.
+## Project Description
 
-Quickly build functional, elegant bots using [Laravel](https://laravel.com/) alongside [DiscordPHP](https://github.com/discord-php/DiscordPHP).
+PHP_Laravel12_Laracord is a Discord bot project built with Laravel 12.
+It demonstrates how to integrate a Discord bot using Laracord, a Laravel-based framework for creating Discord bots easily.
 
-![Screenshot](https://raw.githubusercontent.com/laracord/laracord.com/main/public/images/laracord-cli.png)
+The project provides a working bot that can respond to commands like !ping and !help, and can be extended with custom commands and interactions. It’s a perfect starting point for developers who want to combine Laravel’s power with Discord bot development.
+
+
 
 ## Features
 
-- ⚡️ Out of the box support for databases, caching, and many other Laravel features thanks to [Laravel Zero](https://laravel-zero.com/).
-- 🚀 Instantly generate working bot [commands](https://laracord.com/docs/commands) and [event listeners](https://laracord.com/docs/events) with 0 knowledge.
-- 🧑‍💻 Automatic handling of registering/updating/unregistering application [slash commands](https://laracord.com/docs/slash-commands).
-- 🚚 Easy to use [interaction routing](https://laracord.com/docs/interactions) for persistence on message buttons and actions.
-- 👷 Generate asynchronous [services/tasks](https://laracord.com/docs/services) that run parallel to the bot.
-- 🌎 Optional [HTTP Server](https://laracord.com/docs/http-server) with native Laravel routing and [Livewire support](https://laracord.com/docs/livewire).
-- 🔧 Fully configurable and extendable.
-- 💄 Beautiful console logging with timestamps.
-- 🔍️ Fully [documented](https://laracord.com) and maintained.
+- Connects a Laravel application to Discord using Laracord.
 
-## Documentation
+- Supports custom bot commands (e.g., !ping, !help).
 
-For full documentation, visit [Laracord.com](https://laracord.com).
+- Easy configuration via .env file for bot token and command prefix.
 
-## Bug Reports
+- Console logs to monitor bot status and commands.
 
-If you discover a bug in Laracord, please [open an issue](https://github.com/laracord/framework/issues).
+- Extendable for additional features like moderation, music, or games.
 
-## Contributing
+- Fully compatible with Laravel 12 and PHP 8.2+.
 
-Contributing whether it be through PRs, reporting an issue, or suggesting an idea is encouraged and appreciated.
 
-## License
 
-Laracord is provided under the [MIT License](LICENSE.md).
+
+## Technologies Used
+
+- PHP 8.2 – Core programming language
+
+- Laravel 12 – Backend framework for structured application
+
+- Laracord – Laravel package to create Discord bots
+
+- Composer – Dependency manager for PHP
+
+- Discord API – Platform to interact with Discord servers
+
+
+
+---
+
+
+
+## Installation Steps
+
+
+---
+
+
+## STEP 1: Create Laravel 12 Project
+
+### Open terminal / CMD and run:
+
+```
+composer create-project laracord/laracord PHP_Laravel12_Laracord
+
+```
+
+### Go inside project:
+
+```
+cd PHP_Laravel12_Laracord
+
+```
+
+#### Explanation:
+
+Installs a fresh Laravel 12 project with Laracord pre-configured.
+
+cd moves you into the project folder to start working.
+
+
+
+
+## STEP 2: Configure Your Bot Token
+
+### Get a valid Discord bot token:
+
+1. Go to Discord Developer Portal
+
+2. Create a new application.
+
+3. Go to Bot → Add Bot → Copy the Bot Token.
+
+4. Open the .env file in your project folder and add:
+
+```
+DISCORD_TOKEN=PASTE_YOUR_BOT_TOKEN_HERE
+DISCORD_COMMAND_PREFIX=!
+
+```
+
+#### Explanation:
+
+.env stores secret keys like your Discord bot token.
+
+DISCORD_COMMAND_PREFIX sets the prefix for bot commands.
+
+
+
+
+
+## STEP 3: Run the Bot
+
+### From your project folder, run:
+
+```
+php laracord
+
+```
+
+### If everything is set up correctly, you should see logs like:
+
+```
+Client is ready.
+Successfully booted Laracord with 2 commands, and 1 interaction.
++---------+------------------------+
+| Command | Description            |
++---------+------------------------+
+| !ping   | Ping? Pong!            |
+| !help   | View the command help. |
++---------+------------------------+
+
+```
+
+#### Explanation:
+
+Starts the bot and connects it to Discord.
+
+Shows available commands and confirms the bot is online.
+
+
+
+
+
+## STEP 4: Invite the Bot to Your Server
+
+1. Copy the OAuth2 link shown in the logs after running php laracord.
+
+2. Open it in your browser and select a server you manage.
+
+3. Authorize the bot to join the server.
+
+
+#### Explanation:
+
+Adds your bot to a Discord server so it can interact with users.
+
+
+
+
+## STEP 5: Test the Bot
+
+### In your Discord server, type:
+
+```
+!ping
+
+```
+
+### The bot should respond with:
+
+```
+Pong!
+
+```
+
+#### Explanation:
+
+Confirms that the bot is working and responding to commands.
+
+
+
+## Expected Output:
+
+### Bot Console Logs:
+
+
+<img src="screenshots/Screenshot 2026-03-20 172054.png" width="900">
+
+
+### OAuth2 Authorization:
+
+
+<img src="screenshots/Screenshot 2026-03-20 175121.png" width="900">
+
+
+
+---
+
+## Project Folder Structure:
+
+```
+PHP_Laravel12_Laracord/
+├── app/
+├── laracord/          # Bot commands & events
+├── config/
+├── database/
+├── public/
+├── resources/
+├── routes/
+├── storage/
+├── tests/
+├── vendor/
+├── .env
+├── artisan
+└── composer.json
+
+```
